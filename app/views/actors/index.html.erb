@@ -1,0 +1,21 @@
+<h1>Lista de actores</h1>
+
+<ul>
+  <% @actors.each do |actor| %>
+    <article>
+      <img src="<%= actor.image_url %>" alt="imagen actor">
+      <h2><%= actor.name %></h2>
+      <%= label_tag(:bio, actor.bio) %>
+      
+      <h3>Birth Date and Place</h3>
+      <%= label_tag(:birth_date, actor.birth_date) %> <br>
+      <%= label_tag(:birth_place, actor.birth_place) %>
+      
+      <% if !actor.alive %>
+        <h3>Death Date and Place</h3>
+        <%= label_tag(:death_date, actor.death_date) %> <br>
+        <%= label_tag(:death_place, actor.death_place) %>
+      <% end %>
+    </article>
+  <% end %>
+</ul>
