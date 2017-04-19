@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   # get 'actors' => 'actors#index'
-  get "actors" , to: "actors#index"
+  get "actors", to: "actors#index"
   get "actors/new", to: "actors#new"
   post "actors/new", to: "actors#create"
   # get "/actors" , to: "actors#index"
