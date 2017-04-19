@@ -1,0 +1,40 @@
+<%= form_for :actor, url: actors_new_path do |f| %>
+  <article>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label("Biografía", nil, {class: "label_class", id: "label_id"}) %>
+    <%= f.text_area(:bio, cols: 20, rows: 6) %>
+  </p>
+  <p>
+    <%= f.label "Fecha de nacimiento" %>
+    <%= f.date_field(:birth_date) %>
+  </p>
+  <p>
+    <%= f.label "Lugar de nacimiento" %>
+    <%= f.text_field :birth_place %>
+  </p>
+  <p>
+    <%= f.label "URL imagen" %>
+    <%= f.url_field(:image_url)%>
+    <!--<%= f.text_field :image_url %> -->
+  </p>
+  <p>
+    <%= f.label "esta vivo?" %>
+    <%= f.check_box :alive %> <br />
+  </p>
+  <p>
+    <%= f.label "Fecha de muerte" %>
+    <%= f.date_field(:death_date) %>
+  </p>
+  <p>
+    <%= f.label "Lugar de muerte" %>
+    <%= f.text_field :death_place %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  </article>
+<% end %>
