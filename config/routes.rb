@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   # get 'actors' => 'actors#index'
-  get "/actors", to: "actors#index"
-  get "/actors/new", to: "actors#new"
-  post "/actors", to: "actors#create"
+  # get "/actors", to: "actors#index"
+  # get "/actors/new", to: "actors#new"
+  # post "/actors", to: "actors#create"
+  resources :actors
   # get "/actors" , to: "actors#index"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

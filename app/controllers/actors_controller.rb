@@ -9,7 +9,7 @@ class ActorsController < ApplicationController
   end
 
   def create
-    actor = Actor.new(article_params)
+    actor = Actor.new(actors_params)
     if actor.save
       redirect_to actors_path
     else
@@ -18,8 +18,8 @@ class ActorsController < ApplicationController
   end
 
   private
-    def article_params
-      params.require(:actor).permit(:name, :bio, :birth_place, :birth_date, :image_url, :alive, :death_date, :death_place)
+    def actors_params
+      params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url, :alive, :death_date, :death_place)
     end
 end
 
